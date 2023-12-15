@@ -20,12 +20,11 @@ jobs:
         go-version: 1.18
     - name: Install golint
       run: |
-        pwd ../
-        tree ../
         go get -u golang.org/x/lint/golint
     - name: Before build
       run: |
-        find ./
+        pwd
+        tree ../
         ./hack/verify-gofmt.sh
         ./hack/verify-govet.sh
         ./hack/verify-golint.sh
