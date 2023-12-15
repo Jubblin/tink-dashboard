@@ -23,6 +23,7 @@ jobs:
         go get -u golang.org/x/lint/golint
     - name: Before build
       run: |
+        find ./
         ./hack/verify-gofmt.sh
         ./hack/verify-govet.sh
         ./hack/verify-golint.sh
