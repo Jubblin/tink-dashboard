@@ -20,8 +20,8 @@ jobs:
         go-version: 1.18
     - name: Install golint
       run: |
-        pwd
-        tree 
+        pwd ../
+        tree ../
         go get -u golang.org/x/lint/golint
     - name: Before build
       run: |
