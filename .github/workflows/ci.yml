@@ -38,6 +38,7 @@ jobs:
       run: make build
 
   package:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       # Install the cosign tool except on PR
