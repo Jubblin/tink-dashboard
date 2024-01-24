@@ -23,9 +23,6 @@ jobs:
         go get -u golang.org/x/lint/golint
     - name: Before build
       run: |
-        cd ..
-        pwd
-        tree ../
         ./hack/verify-gofmt.sh
         ./hack/verify-govet.sh
         ./hack/verify-golint.sh
